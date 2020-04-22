@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-
 import ToolTip from '../ToolTip';
 
 interface ContainerProps {
