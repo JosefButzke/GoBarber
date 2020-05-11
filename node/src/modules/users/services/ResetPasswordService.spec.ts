@@ -1,6 +1,5 @@
 import 'reflect-metadata';
 import AppError from '@shared/errors/AppError';
-import FakeMailProvider from '@shared/container/providers/MailProvider/fakes/FakeMailProvider';
 import ResetPasswordService from './ResetPasswordService';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import FakeUserTokensRepository from '../repositories/fakes/FakeUserTokensRepository';
