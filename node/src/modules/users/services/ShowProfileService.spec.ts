@@ -10,7 +10,7 @@ let showProfile: ShowProfileService;
 let updateProfile: UpdateProfileService;
 let fakeHashProvider: FakeHashProvider;
 
-describe('UpdateProfile', () => {
+describe('ShowProfile', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     updateProfile = new UpdateProfileService(
