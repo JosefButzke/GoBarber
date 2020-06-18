@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
+import { ActivityIndicator } from 'react-native';
 import { useAuth } from '../../hooks/Auth';
 import {
   Container,
@@ -28,6 +29,7 @@ export interface Providers {
 
 const Dashboard: React.FC = () => {
   const [providers, setProviders] = useState<Providers[]>([]);
+  const [loading, setLoading] = useState(true);
   const { signOut, user } = useAuth();
   const navigation = useNavigation();
 
@@ -39,6 +41,7 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     api.get('/providers').then((response) => {
       setProviders(response.data);
+      setLoading(false);
     });
   }, []);
 
@@ -65,9 +68,12 @@ const Dashboard: React.FC = () => {
       <ProvidersList
         data={providers}
         keyExtractor={(item) => item.id}
-        ListHeaderComponent={
-          <ProvidersListTitle>Cabeleireiros</ProvidersListTitle>
-        }
+        ListHeaderComponent={(
+          <>
+            <ProvidersListTitle>Cabeleireiros</ProvidersListTitle>
+            {loading && <ActivityIndicator size="small" color="gray" />}
+          </>
+        )}
         renderItem={({ item: provider }) => (
           <ProviderContainer
             onPress={() => navigateToCreateAppointment(provider.id)}

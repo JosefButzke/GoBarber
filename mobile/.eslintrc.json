@@ -36,6 +36,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-expressions": "off",
     "react/prop-types": "off",
+    "import/no-duplicates": "off",
     "react/jsx-filename-extension": [
       1,
       {
