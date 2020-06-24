@@ -30,12 +30,11 @@ export interface Providers {
 const Dashboard: React.FC = () => {
   const [providers, setProviders] = useState<Providers[]>([]);
   const [loading, setLoading] = useState(true);
-  const { signOut, user } = useAuth();
+  const { user } = useAuth();
   const navigation = useNavigation();
 
   const navigateToProfile = useCallback(() => {
-    // navigation.navigate('Profile');
-    signOut();
+    navigation.navigate('Profile');
   }, [navigation]);
 
   useEffect(() => {
