@@ -6,7 +6,7 @@ temp/
 coverage/
 ormconfig.json
 node_modules/
-
+dist/
 
 tmp/*
 !tmp/.gitkeep

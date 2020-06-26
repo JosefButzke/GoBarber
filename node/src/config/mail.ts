@@ -14,8 +14,8 @@ export default {
 
   defaults: {
     from: {
-      email: 'suporte@dropdragon.com.br',
-      name: 'Josef da Globalsys',
+      email: 'josef.butzke@zazuu.com.br',
+      name: 'Josef da Zazuu',
     },
   },
 } as IMailConfig;
