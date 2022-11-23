@@ -1,3 +1,5 @@
+<a>https://www.linkedin.com/feed/update/urn:li:activity:6670324595805040640/</a>
+
 # GoBarber
 Este é um projeto desenvolvido para barbeiros, esta em fase de desenvolvimento porem ja é possivel observar a qualidade.
 
